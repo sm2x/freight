@@ -2,7 +2,7 @@
 <templates xml:space="preserve">
     <t t-name="freight_dashboard.dashboard">
         <!--View-->
-        <div class="col-md-12">
+         <!--<div class="col-md-12">
             <!--<style type="text/css" t-if="! widget.isFirefox">-->
                 <!--.o_control_panel.o_breadcrumb_full {-->
                     <!--display: none;-->
