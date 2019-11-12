@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
-###################################################################################
-#
-#    inteslar software trading llc.
-#    Copyright (C) 2018-TODAY inteslar (<https://www.inteslar.com>).
-#    Author:   (<https://www.inteslar.com>)
-#
-###################################################################################
+
 import logging
 import pytz
 import time
@@ -280,7 +274,7 @@ class FreightTrucker(models.Model):
 class FreightPackageLine(models.Model):
     _name = 'freight.package.line'
 
-    name = fields.Char(string='Description', required=True)
+    name = fields.Char(string='Description')
     transport = fields.Selection(([('air','Air'),('ocean','Ocean'),('land','Land')]), string='Transport')
     shipment_id = fields.Many2one('freight.operation', 'Shipment ID')
     package = fields.Many2one('freight.package', 'Package', required=True)
@@ -340,7 +334,7 @@ class FreightOrder(models.Model):
 
     shipment_id = fields.Many2one('freight.operation', 'Shipment ID')
     transport = fields.Selection(([('air','Air'),('ocean','Ocean'),('land','Land')]), string='Transport')
-    name = fields.Char(string='Description', required=True)
+    name = fields.Char(string='Description')
     package = fields.Many2one('freight.package', 'Package', required=True)
     type = fields.Selection(([('dry','Dry'),('reefer','Reefer')]),string="Operation")
     volume = fields.Float('Volume (CBM)')
@@ -431,7 +425,7 @@ class FreightRoute(models.Model):
 class FreightRouteService(models.Model):
     _name = 'freight.route.service'
 
-    service_id = fields.Many2one('product.product', 'Service', domain="[('type','=','service')]")
+    service_id = fields.Many2one('product.product', 'Service', domain="[('type','=','service')]", required=True)
     currency_id = fields.Many2one('res.currency', 'Currency')
     name = fields.Char(string='Description')
     cost = fields.Float('Cost')
