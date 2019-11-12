@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
 import logging
 import os.path
 import base64
@@ -29,15 +28,15 @@ class RegisterInvoice(models.TransientModel):
     invoice_type = fields.Selection([('customer','Customer'),('vendor','Vendor')], string='Invoice Type')
     type = fields.Selection([('agent','Agent'),('consignee','Consignee'),('shipper','Shipper')], string='Invoice to')
 
-    # @api.onchange('type')
-    # def onchage_type(self):
-    #     for line in self:
-    #         if line.type == 'agent':
-    #             return {'domain': {'partner_id': [('agent', '=', True)]}}
-    #         elif line.type == 'consignee':
-    #             return {'domain': {'partner_id': [('consignee', '=', True)]}}
-    #         elif line.type == 'shipper':
-    #             return {'domain': {'partner_id': [('shipper', '=', True)]}}
+     @api.onchange('type')
+    def onchage_type(self):
+     for line in self:
+     if line.type == 'agent':
+               return {'domain': {'partner_id': [('agent', '=', True)]}}
+           elif line.type == 'consignee':
+                 return {'domain': {'partner_id': [('consignee', '=', True)]}}
+           elif line.type == 'shipper':
+                return {'domain': {'partner_id': [('shipper', '=', True)]}}
 
     @api.multi
     def create_invoice(self):
