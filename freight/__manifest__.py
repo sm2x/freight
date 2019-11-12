@@ -7,14 +7,9 @@
 #
 ###################################################################################
 {
-    'name': 'Freight Management',
+    'name': 'Freight',
     'version': '1.0',
     'category': 'freight',
-    'price': 790.00,
-    'currency': 'EUR',
-    'license': 'OPL-1',
-    'website':'https://www.inteslar.com',
-    'live_test_url': 'https://www.youtube.com/watch?v=66lKp26x75k&feature=youtu.be',
     'images': ['static/description/banner.jpg'],
     'author':'inteslar',
     'summary': 'Freight Management By Inteslar',
