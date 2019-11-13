@@ -1,11 +1,5 @@
 # -*- coding: utf-8 -*-
-###################################################################################
-#
-#    inteslar software trading llc.
-#    Copyright (C) 2018-TODAY inteslar (<https://www.inteslar.com>).
-#    Author:   (<https://www.inteslar.com>)
-#
-###################################################################################
+
 {
     'name': 'Freight',
     'version': '1.0',
