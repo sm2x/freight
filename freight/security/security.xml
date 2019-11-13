@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.module.category" id="freight">
+                <field name="name">Freight Management</field>
+                <field name="sequence">0</field>
+                <field name="visible" eval="0" />
+        </record>
+
+        <record id="freight_port" model="res.groups">
+            <field name="name">Manage Freight Port</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        
+
+        <record id="freight_vessel" model="res.groups">
+            <field name="name">Manage Freight Vessel</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_airline" model="res.groups">
+            <field name="name">Manage Freight Airline</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_trucker" model="res.groups">
+            <field name="name">Manage Freight Trucker</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_incoterms" model="res.groups">
+            <field name="name">Manage Freight Incoterms</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_package" model="res.groups">
+            <field name="name">Manage Freight Package</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_operation" model="res.groups">
+            <field name="name">Manage Freight Operation</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_order" model="res.groups">
+            <field name="name">Manage Freight Order</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_package_item" model="res.groups">
+            <field name="name">Manage Freight Package Item</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_item_line" model="res.groups">
+            <field name="name">Manage Freight item Lines</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_route" model="res.groups">
+            <field name="name">Manage Freight Route</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="freight_service" model="res.groups">
+            <field name="name">Manage Freight Service</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="shipment_stage" model="res.groups">
+            <field name="name">Manage Freight Stages</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        <record id="hr_dashboard_freight" model="res.groups">
+            <field name="name">Manage Freight Dashboard</field>
+            <field name="category_id" ref="freight"/>
+        </record>
+
+        
+    </data>
+</odoo>
