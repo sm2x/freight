@@ -29,7 +29,7 @@ Key Features
                 'calendar',
                 'hr'],
     'data': [
-        'data/freight_data.xml',
+        'data/freight_data.xml','security/security.xml',
         'security/ir.model.access.csv',
         'report/bill_of_lading.xml',
         'report/airway_bill.xml',
